@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	
+  background-image: linear-gradient(to top, rgba(0,0,255,0.4), rgba(0,255,0,0.4));
+
+
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'lato',sans-serif;
+	margin: 0;
+}
+
+
+
+.music-container{
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 20px 20px 0 rgba(0,0,0,0.4);
+	height: 50px;
+	width: 260px;
+	display: flex;
+	padding: 20px 30px;
+	
+	margin: 100px 0px ;
+	z-index: 10;
+	position: relative;
+}
+
+
+
+.img-container img{
+	border-radius: 800px;
+	object-fit: cover;
+	height: 85px;
+	width: 80px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: rotate 3s linear infinite;
+	animation-play-state:paused; 
+
+
+  }
+
+
+  .img-container::after{
+  	content: '';
+  	background-color:white;
+  	border-radius: 60%;
+  	position: absolute;
+  	bottom:100%;
+  	left: 50%;
+  	width: 20px;
+  	height: 20px;
+  	transform:translate(-500%,80%);
+  }
+
+
+.music-container.play .img-container img{
+    animation-play-state: running;
+}
+
+
+
+
+@keyframes rotate {
+	from  {
+		transform: rotate(0deg);
+	}
+
+	to {
+        transform: rotate(360deg);
+	}
+
+}
+
+
+.navigation{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+    padding-left:80px;
+	
+}
+
+.action-btn-back img{
+  height: 10px;
+  width: 10px;
+
+
+
+}
+
+.action-btn-forward img{
+  height: 10px;
+  width: 10px;
+ 
+
+ 
+}
+
+
+
+.action-btn-play img{
+  
+  height: 10px;
+  width: 10px;
+
+
+
+  
+}
+
+
+button{
+	border-color: white;
+	box-shadow: none;
+}
+button:focus {
+    outline: none;
+}
+
+
+
+.music-info{
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 15px 15px 0px 0px;
+
+	position: absolute;
+	top:30%;
+   bottom: -100px;
+	left: 20px;
+	width: 220px;
+	padding: 10px 0px 10px 170px;
+    opacity: 0%;
+	transform:translateY(0%);
+	transition: transform 0.3s  ease-in, opacity 0.3s ease-in;
+	z-index:0;
+
+
+}
+.music-container.play .music-info{
+	opacity: 0.4;
+	transform:translateY(-90%);
+
+	
+
+
+}
+
+h3{
+		font-family: Gabriola Regular;
+}
+
+
+
+
+.progress-container{
+
+	background:white;
+	padding-right: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+    margin:5px 10px 0px -95px; 
+	height: 4px;
+	width: 250%;
+    
+	
+
+}
+
+
+.progress {
+	background-color:red;
+	border-radius: 5px;
+	height: 100%;
+     width: 0%;
+	
+	transition:width 0.1s linear;
+}

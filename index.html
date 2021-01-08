@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Music player</title>
+
+</head>
+
+<body>
+
+	<h1>Music player </h1>
+
+	<div class="music-container play" id="music-container" >
+
+		<div class = "music-info">
+
+			<h3 id="title"></h3>
+
+
+			<div class="progress-container"   id="progress-container">
+
+				<div class="progress"  id="progress"></div>
+
+			</div>
+
+
+		</div>	    
+    
+
+    	<audio src="hey.mp3" id="audio"></audio>
+
+   		<div class="img-container ">
+
+				<img src="hey.jpg" alt="music-cover" id="cover" />
+		</div>
+
+
+
+   		<div class="navigation">
+
+	   		<div class="action-btn-back" id="rev">
+	   			<i class="fas fa-backward">
+		   			<button id="rev" class="action-btn-rev" > 
+		   				<img src="rev.png" alt="rev" class="fas fa-backward">
+		   			</button>
+	   			</i>
+	   		</div>
+
+	   		<div class="action-btn-play" id="play">
+	   			<i class="fas fa-play"> 
+		   			<button id="play" class="action-btn-play">
+		   				<img src="play.png" alt="play" >
+		   			</button>
+	   			</i>
+	   		</div>
+
+	   		<div class="action-btn-forward" id="forward">
+	   			<i class="fas fa-forward">
+		   			<button id="forward" class="action-btn-forward">
+		   				<img src="forward.png" alt="forward" class="fas fa-forward">
+		   			</button>
+	   			</i>
+	   			
+	   		</div>
+
+
+   		</div>
+	
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
